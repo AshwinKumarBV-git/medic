@@ -1,0 +1,109 @@
+.prediction-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.prediction-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.predictions-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.prediction-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem;
+}
+
+.prediction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.prediction-header h3 {
+  color: var(--text-color);
+  margin: 0;
+}
+
+.prediction-date {
+  color: var(--secondary-color);
+  font-size: 0.875rem;
+}
+
+.prediction-details {
+  display: grid;
+  gap: 1rem;
+}
+
+.predicted-illness {
+  color: var(--primary-color);
+  font-size: 1.125rem;
+}
+
+.confidence {
+  color: var(--text-color);
+}
+
+.recommendations {
+  margin-top: 0.5rem;
+}
+
+.recommendations ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.recommendations li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.recommendations li:before {
+  content: '•';
+  position: absolute;
+  left: 0.5rem;
+  color: var(--primary-color);
+}
+
+.loading,
+.error-message,
+.no-predictions {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.error-message {
+  color: var(--danger-color);
+}
+
+.no-predictions {
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .prediction-container {
+    padding: 1rem;
+  }
+
+  .prediction-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
